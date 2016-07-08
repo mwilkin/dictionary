@@ -16,7 +16,7 @@ _A Ruby web application dictionary that shows a list of words which are linked t
 
 ## Deployed to Heroku at:
 
-<!-- update with Heroku link -->
+https://sleepy-atoll-49786.herokuapp.com/
 
 ## Known Bugs
 
