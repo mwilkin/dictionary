@@ -1,13 +1,12 @@
-<h1>New Definitions</h1>
+<h1>Add a definition for <%= @word.word() %></h1>
 
 <form action="/definitions" method="post">
   <div class="form-group">
     <input type="hidden" name="word_id" id="word_id" value="<%= @word.id() %>">
-    <label for="definition">Add a new definition</label>
-    <input type="text" name="definition" id="definition">
+    <input type="text" name="definition" id="definition" require id="definition">
   </div>
   <button type="submit" class="btn-primary btn-md">Submit</button>
 </form>
 
 
-<a href="/">Home</a>
+<h3><a href="/">Home</a></h3>

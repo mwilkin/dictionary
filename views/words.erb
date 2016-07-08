@@ -1,0 +1,11 @@
+<% @words.length > 0 %>
+  <ul>
+    <% @words.each() do |word| %>
+      <li><a href="/words/<%= word.id() %>"> <%= word.word() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h2>No words have been added yet</h2>
+<% end %>
+
+<h3><a href="/words/new">Add a word</a></h3>
