@@ -8,7 +8,7 @@
 
 ## Description
 
-_A Ruby web application that shows a list of words which are linked to their definition(s). The user is able to add words to the word list and definitions to any word._
+_A Ruby web application dictionary that shows a list of words which are linked to their definition(s). The user is able to add words to the word list and definitions to any word._
 
 ## Setup/Installation Requirements:
 
