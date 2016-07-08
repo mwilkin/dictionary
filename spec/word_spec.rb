@@ -22,6 +22,26 @@ describe(Word) do
     end
   end
 
+  # describe('#id') do
+  #
+  # end
+
+  describe('#add_definition') do
+    it('adds a definition to the array of definitions') do
+      test_word = Word.new({:word => "Yell"})
+      test_word.add_definition("speak loudly")
+      expect(test_word.definitions[0].define).to(eq("speak loudly"))
+    end
+  end
+
+  # describe('.all') do
+  #   it('')
+  # end
+  #
+  # describe('.clear') do
+  #
+  # end
+
   describe('.find') do
     it('returns a word by its id') do
       test_word = Word.new({:word => 'bike'})
@@ -31,4 +51,5 @@ describe(Word) do
       expect(Word.find(test_word.id())).to(eq(test_word))
     end
   end
+
 end
