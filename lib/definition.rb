@@ -1,6 +1,6 @@
 class Definition
-
+  attr_reader(:define)
   define_method(:initialize) do | attributes |
-    @definition = attributes.fetch(:definition)
+    @define = attributes.fetch(:definition)
   end
 end
