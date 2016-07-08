@@ -22,9 +22,13 @@ describe(Word) do
     end
   end
 
-  # describe('#id') do
-  #
-  # end
+  describe('#id') do
+    it('tracks the id of a word') do
+      test_word = Word.new({:word => "contacts"})
+      expect(test_word.id()).to(eq(1))
+    end
+
+  end
 
   describe('#add_definition') do
     it('adds a definition to the array of definitions') do
@@ -34,13 +38,19 @@ describe(Word) do
     end
   end
 
-  # describe('.all') do
-  #   it('')
-  # end
-  #
-  # describe('.clear') do
-  #
-  # end
+  describe('.all') do
+    it('is empty at first') do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('.clear') do
+    it('removes the saved words and definitions') do
+      Word.new({:word => "watch"}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 
   describe('.find') do
     it('returns a word by its id') do
