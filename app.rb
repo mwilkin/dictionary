@@ -20,7 +20,6 @@ get('/words/new') do
 end
 
 post('/words') do
-  @page_title = "home"
   word = Word.new({:word => params.fetch('word')})
   word.save()
   @words = Word.all()
@@ -28,12 +27,16 @@ post('/words') do
 end
 
 get('/words/:id') do
-  @word = Word.find(params.fetch('id').to_i())
+  @word = Word.find(params.fetch('id').to_i)
   erb(:word)
 end
 
+post('/words/:id') do
+  @word = Word.find(params.fetch('id').to_i)
+end
+
 get('/words/:id/definitions/new') do
-  @word = Word.find(params.fetch('id').to_i())
+  @word = Word.find(params.fetch('id').to_i)
   erb(:definition_add)
 end
 
