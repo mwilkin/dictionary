@@ -1,4 +1,4 @@
-<% @words.length > 0 %>
+<% if @words.length > 0 %>
   <ul>
     <% @words.each() do |word| %>
       <li><a href="/words/<%= word.id() %>"> <%= word.word() %></a></li>
