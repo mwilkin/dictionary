@@ -2,7 +2,7 @@
 
 ### _Ruby: Independent Project Week 2_
 
-##### _Version as of 7/8/2016_
+##### _Version as of 7/10/2016_
 
 #### By _**Matt Wilkin**_
 

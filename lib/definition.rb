@@ -1,3 +1,4 @@
+require('pry')
 class Definition
   attr_reader(:definition, :id)
   @@definitions = []

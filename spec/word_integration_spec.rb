@@ -40,3 +40,21 @@ describe('path to a form to add new definitions', {:type => :feature}) do
     expect(page).to have_content("Your definition was successfully added.")
   end
 end
+describe('path to a form to add new definitions', {:type => :feature}) do
+  it('display the definition') do
+    visit("/words/new")
+    fill_in('word', :with => 'fish')
+    click_button('Submit')
+    click_link('List of words')
+    click_link('fish', match: :first)
+    click_link('Add a definition')
+    fill_in('definition', :with => 'an animal that swims in the sea')
+    click_button('Submit')
+    expect(page).to have_content("Your definition was successfully added.")
+    click_link('List of Words')
+    expect(page).to have_content("fish")
+    click_link('fish')
+    expect(page).to have_content('an animal that swims in the sea')
+
+  end
+end
