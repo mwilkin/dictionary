@@ -5,7 +5,7 @@ describe(Definition) do
   before() do
     Definition.clear()
   end
-  
+
   describe("#definition") do
     it("returns a defintion of a word") do
       test_definition = Definition.new({:definition => "The definition is something cool"})
