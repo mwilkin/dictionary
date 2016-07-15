@@ -5,12 +5,13 @@ require('./lib/definition')
 also_reload('lib/**/*.rb')
 
 get('/') do
-  @page_title = "home"
+  @page_title = "Dictionary"
   @words = Word.all()
   erb(:index)
 end
 
 get('/words') do
+  @page_title = "Dictionary"
   @words = Word.all()
   erb(:words)
 end

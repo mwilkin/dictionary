@@ -1,14 +1,11 @@
-<div>
-  <% if @words.length > 0 %>
-    <ul>
-      <% @words.each() do |word| %>
-        <li><a href="/words/<%= word.id() %>"> <%= word.word() %></a></li>
-      <% end %>
-    </ul>
-  <% else %>
-      <h2>There aren't any words saved yet!</h2>
-  <% end %>
-
+<% if @words.length > 0 %>
+  <ul>
+    <% @words.each() do |word| %>
+      <li><a href="/words/<%= word.id() %>"> <%= word.word() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h2>There aren't any words saved yet!</h2>
+<% end %>
+<hr>
 <h2><a href="/words/new">Add a word</a></h2>
-
-</div>

@@ -33,8 +33,9 @@ describe(Word) do
   describe('#add_definition') do
     it('adds a definition to the array of definitions') do
       test_word = Word.new({:word => "Yell"})
-      test_word.add_definition("speak loudly")
-      expect(test_word.definitions[0].definition).to(eq("speak loudly"))
+      test_definition = Definition.new({:definition => "speak loudly"})
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions[0]).to(eq(test_definition))
     end
   end
 
